@@ -6,7 +6,7 @@ const nginx = new awsx.ecs.FargateService("nginx", {
     taskDefinitionArgs: {
         containers: {
             nginx: {
-                image: awsx.ecs.Image.fromPath("022166486589.dkr.ecr.eu-west-2.amazonaws.com/nginx-gif", "/Users/husseinmohamed/Desktop/pulumi"),
+                image: awsx.ecs.Image.fromPath("<docker-repo-url>", "<path-to-your-Dockerfile"),
                 memory: 128,
                 portMappings: [ lb ],
             },
